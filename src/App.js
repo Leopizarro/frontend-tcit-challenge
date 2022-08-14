@@ -1,11 +1,17 @@
 import React from 'react';
 import logo from './logo.svg';
 import { Counter } from './features/counter/Counter';
+import { Search } from './features/Search/Search';
 import './App.css';
+import { PostsList } from './features/PostsList/PostsList';
+import { NewPost } from './features/NewPost/NewPost';
 
 function App() {
   return (
     <div className="App">
+      <Search />
+      <PostsList />
+      <NewPost />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />

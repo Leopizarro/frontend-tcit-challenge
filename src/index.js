@@ -5,9 +5,12 @@ import { store } from './app/store';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
+import { fetchPosts } from './features/PostsList/postslistSlice';
 
 const container = document.getElementById('root');
 const root = createRoot(container);
+
+store.dispatch(fetchPosts())
 
 root.render(
   <React.StrictMode>
