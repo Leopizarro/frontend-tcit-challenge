@@ -1,11 +1,16 @@
 export const getPostsAPI = async () => {
-    const res = await fetch('http://127.0.0.1:3000/posts/')
-    const posts = await res.json()
-    return posts
+    try {
+        const res = await fetch('http://127.0.0.1:3000/posts/')
+        const posts = await res.json()
+        return posts
+    } catch (error) {
+        console.error(error);
+    }
 }
 
 export const addPostAPI = async (newPost) => {
-    const res = await fetch('http://127.0.0.1:3000/posts/', {
+    try {
+        const res = await fetch('http://127.0.0.1:3000/posts/', {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
@@ -13,17 +18,21 @@ export const addPostAPI = async (newPost) => {
           },
           body: JSON.stringify(newPost)
         });
-    const newPostAdded = await res.json()
-    console.log(newPostAdded)
-    return newPostAdded
+        const newPostAdded = await res.json()
+        return newPostAdded
+    } catch (error) {
+        console.error(error);
+    }
 }
 
 export const deletePostAPI = async (postId) => {
-    console.log(postId)
-    const res = await fetch('http://127.0.0.1:3000/posts/' + postId, {
-        method: 'DELETE',
-        });
-    const postDeleted = await res.json()
-    console.log(postDeleted)
-    return postDeleted
+    try {
+        const res = await fetch('http://127.0.0.1:3000/posts/' + postId, {
+            method: 'DELETE',
+            });
+        const postDeleted = await res.json()
+        return postDeleted
+    } catch (error) {
+        console.error(error);
+    }
 }
