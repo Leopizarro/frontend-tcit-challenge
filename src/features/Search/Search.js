@@ -9,8 +9,8 @@ export function Search() {
     const handleChangeSearchField = (e) => setSearchField(e.target.value)
     const handleSearchPosts = (e) => dispatch(filterPosts(searchField))
     return(
-        <div className='search-container'>
-            <input type='text' placeholder='Filtro de Nombre' onChange={handleChangeSearchField}></input>
+        <div className="search-container">
+            <input className="search-input" type='text' placeholder='Filtro de Nombre' onChange={handleChangeSearchField}></input>
             <button onClick={handleSearchPosts}>Buscar</button>
         </div>
     )

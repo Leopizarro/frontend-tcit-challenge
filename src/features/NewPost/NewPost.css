@@ -2,11 +2,24 @@
     display: flex;
     justify-content: space-between;
     min-width: 100%;
+    gap: 1em;
+    height: 30px;
 }
 
-@media screen and (max-width: 440px) {
+form > button {
+    font-size: calc(12px + 1vmin);
+}
+
+.newpost-input {
+    min-width: 30%;
+}
+
+@media screen and (max-width: 450px) {
     .newpost-container, form {
         flex-direction: column;
-        gap: 0.2em;
+        gap: 0.5em;
+    }
+    .newpost-input {
+        min-width: 100%;
     }
 }

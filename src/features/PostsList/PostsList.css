@@ -11,8 +11,8 @@ table {
     padding: 8px;
   }
   
-  tr:nth-child(even) {
-    background-color: #f1f1f1;
+  tbody > tr:nth-child(odd) {
+    background-color: #ebebeb;
   }
   
   tr {
@@ -21,3 +21,7 @@ table {
   th {
     font-size: calc(10px + 2vmin);
   }
+
+thead {
+  background: #b1b1b1;
+}
