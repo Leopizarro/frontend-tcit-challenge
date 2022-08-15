@@ -17,16 +17,20 @@ export function PostsList() {
     }
     return (
         <table>
-            <tr>
-                <th>Nombre</th>
-                <th>Descripción</th>
-                <th>Acción</th>
-            </tr>
-            {
-            filteredPosts.map(post => {
-                return(<Post post={post}/>)
-            })
-        }
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                {
+                filteredPosts.map(post => {
+                    return(<Post key={post.id} post={post}/>)
+                })
+                }
+            </tbody>
         </table>
     )
     

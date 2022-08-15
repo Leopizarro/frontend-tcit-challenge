@@ -44,9 +44,8 @@ export default postsListSlice.reducer;
 
 
 const selectPosts = (state) => state.postsList.posts
-export const selectAllPosts = createSelector(selectPosts, (posts) => posts)
-console.log('selectposts', selectAllPosts)
 
+export const selectAllPosts = createSelector(selectPosts, (posts) => posts)
 
 export const fetchPosts = () => async (dispatch) => {
     dispatch(postsLoading())
