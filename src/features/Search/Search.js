@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { filterPosts } from '../Search/searchSlice';
+import { filterPosts } from './searchSlice';
+import './Search.css';
 
 export function Search() {
     const [searchField, setSearchField] = useState('')
@@ -9,7 +10,7 @@ export function Search() {
     const handleSearchPosts = (e) => dispatch(filterPosts(searchField))
     console.log(searchField);
     return(
-        <div>
+        <div className='search-container'>
             <input type='text' placeholder='Filtro de Nombre' onChange={handleChangeSearchField}></input>
             <button onClick={handleSearchPosts}>Buscar</button>
         </div>

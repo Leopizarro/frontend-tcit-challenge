@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { saveNewPost } from '../PostsList/postslistSlice';
+import { saveNewPost } from '../postslist/postslistSlice';
+import './NewPost.css';
 
 export const NewPost = () => {
     const dispatch = useDispatch()
@@ -24,7 +25,7 @@ export const NewPost = () => {
     }
 
     return(
-        <div>
+        <div className='newpost-container'>
             <input placeholder='Nombre' value={postNameInput} disabled={isLoading} onChange={handlePostNameChange}></input>
             <input placeholder='Descripción' value={postDescriptionInput} disabled={isLoading} onChange={handlePostDescriptionChange}></input>
             <button onClick={handleAddNewPost} disabled={isLoading}>Crear</button>

@@ -61,7 +61,6 @@ export const postsListSlice = createSlice({
             state.posts.splice(postIndex, 1)
         },
         postAdded: (state, action) => {
-            console.log(action.payload)
             const newPostAdded = action.payload
             state.posts.push(newPostAdded)
         },
@@ -69,7 +68,6 @@ export const postsListSlice = createSlice({
         state.requestStatus = 'loading'
       },
       postsLoaded: (state, action) => {
-        console.log(action)
         const newPosts = []
         action.payload.forEach(post => {
             newPosts.push(post)

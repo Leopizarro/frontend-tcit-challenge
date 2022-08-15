@@ -1,7 +1,8 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { selectSearchField } from '../Search/searchSlice';
+import { selectSearchField } from '../search/searchSlice';
 import Post from './Post';
+import './PostsList.css';
 
 export function PostsList() {
     const loadingStatus = useSelector((state) => state.postsList.requestStatus)
@@ -15,13 +16,18 @@ export function PostsList() {
         )
     }
     return (
-        <div>
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Acción</th>
+            </tr>
             {
             filteredPosts.map(post => {
                 return(<Post post={post}/>)
             })
         }
-        </div>
+        </table>
     )
     
 }

@@ -6,7 +6,11 @@ const Post = ({post}) => {
     const dispatch = useDispatch()
     const handleDeletePost = (e) => dispatch(deletePost(post.id))
     return(
-        <div><p>name: {post.name}</p><p>description: {post.description}</p><button onClick={handleDeletePost}>Eliminar</button></div>
+        <tr>
+            <td>{post.name}</td>
+            <td>{post.description}</td>
+            <td><button onClick={handleDeletePost}>Eliminar</button></td>
+        </tr>
     )
 }
 

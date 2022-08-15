@@ -1,0 +1,10 @@
+h1 {
+    margin: 0;
+    font-size: 40px;
+}
+
+.header-container {
+    padding: 2em 0;
+    background-image:linear-gradient(180deg, #4db6ac 10%,#238dc2 100%);
+    color: #fff;
+}
