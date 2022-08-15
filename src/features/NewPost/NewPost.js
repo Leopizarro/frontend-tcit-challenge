@@ -26,9 +26,11 @@ export const NewPost = () => {
 
     return(
         <div className='newpost-container'>
-            <input placeholder='Nombre' value={postNameInput} disabled={isLoading} onChange={handlePostNameChange}></input>
-            <input placeholder='Descripción' value={postDescriptionInput} disabled={isLoading} onChange={handlePostDescriptionChange}></input>
-            <button onClick={handleAddNewPost} disabled={isLoading}>Crear</button>
+            <form onSubmit={handleAddNewPost}>
+                <input placeholder='Nombre' value={postNameInput} disabled={isLoading} onChange={handlePostNameChange} required></input>
+                <input placeholder='Descripción' value={postDescriptionInput} disabled={isLoading} onChange={handlePostDescriptionChange} required></input>
+                <button type='submit' disabled={isLoading}>Crear</button>
+            </form>
         </div>
     )
 

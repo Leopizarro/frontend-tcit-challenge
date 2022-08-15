@@ -1,11 +1,11 @@
-.newpost-container {
+.newpost-container, form {
     display: flex;
     justify-content: space-between;
     min-width: 100%;
 }
 
 @media screen and (max-width: 440px) {
-    .newpost-container {
+    .newpost-container, form {
         flex-direction: column;
         gap: 0.2em;
     }
