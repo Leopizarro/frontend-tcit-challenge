@@ -3,7 +3,7 @@
     justify-content: space-between;
     min-width: 100%;
     gap: 1em;
-    height: 30px;
+    min-height: 30px;
 }
 
 form > button {
@@ -18,8 +18,5 @@ form > button {
     .newpost-container, form {
         flex-direction: column;
         gap: 0.5em;
-    }
-    .newpost-input {
-        min-width: 100%;
     }
 }

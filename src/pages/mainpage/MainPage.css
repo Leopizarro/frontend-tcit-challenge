@@ -4,5 +4,6 @@
     max-width: 100%;
     gap: 0.5em;
     align-items: center;
+    margin: 0 10px;
     font-size: calc(10px + 2vmin);
 }
