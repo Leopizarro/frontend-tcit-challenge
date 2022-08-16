@@ -57,7 +57,6 @@ export function deletePost(postId) {
     return async function saveNewPostThink(dispatch, detState) {
         const postToBeDeletedId = postId
         const postAlreadyDeleted = await deletePostAPI(postToBeDeletedId)
-        console.log('xsasda',postAlreadyDeleted)
         dispatch(postDeleted(postAlreadyDeleted))
     }
 }
