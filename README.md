@@ -8,8 +8,10 @@ This repository is the FrontEnd of the project, the BackEnd can be found in this
 
 ## Instructions for running the app:
   1.- Clone the repository.
-  2.- 'npm install' to install node_modules
-  3.- 'npm start' to start the project 
+  
+  2.- 'npm install' to install node_modules.
+  
+  3.- 'npm start' to start the project.
 
 ## Available Scripts
 
