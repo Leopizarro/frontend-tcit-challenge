@@ -20,6 +20,7 @@ export const NewPost = () => {
     const handlePostDescriptionChange = (e) => setPostDescriptionInput(e.target.value)
 
     const handleAddNewPost = async (e) => {
+        e.preventDefault()
         setRequestStatus('loading')
         const newPost = {title: postNameInput, description: postDescriptionInput}
         await dispatch(saveNewPost(newPost))
