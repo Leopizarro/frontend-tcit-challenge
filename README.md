@@ -4,7 +4,7 @@ the users input, and delete posts.
 
 Project built with React + Redux + Redux Toolkit.
 
-This repository is the FrontEnd of the project, the BackEnd can be found in this link:
+This repository is the FrontEnd of the project, the BackEnd can be found in this link: https://github.com/Leopizarro/backend-tcit-challenge
 
 ## Instructions for running the app:
   1.- Clone the repository.
